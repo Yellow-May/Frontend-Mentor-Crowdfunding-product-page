@@ -1,0 +1,25 @@
+//Primary
+$Moderate-cyan: hsl(176, 50%, 47%);
+$Dark-cyan: hsl(176, 72%, 28%);
+
+// Neutral
+$Black: hsl(0, 0%, 0%);
+$Dark-gray: hsl(0, 0%, 48%);
+
+// Reset
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}

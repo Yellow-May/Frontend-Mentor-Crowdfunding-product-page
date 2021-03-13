@@ -1,0 +1,94 @@
+.bot {
+	.intro {
+		text-align: justify;
+
+		h1 {
+			padding: 1rem 0;
+			font-size: 1.5em;
+		}
+
+		p {
+			padding: 1rem 0;
+			line-height: 1.75;
+			font-size: 1em;
+		}
+	}
+
+	.cards {
+		display: grid;
+		gap: 2.5rem;
+
+		.card {
+			width: 100%;
+			border: thin solid lighten($Dark-gray, 40);
+			border-radius: 0.75rem;
+			padding: 2.5rem;
+
+			&.faded {
+				opacity: 0.5;
+
+				.card-foot .btn {
+					cursor: not-allowed;
+				}
+			}
+
+			.card-head {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				.title {
+					font-size: 1.65em;
+				}
+
+				.pledge {
+					font-size: 1.25em;
+					color: $Moderate-cyan;
+				}
+			}
+
+			.card-body {
+				padding: 1.5rem 0;
+				font-size: 1em;
+				color: lighten($Dark-gray, 10);
+				letter-spacing: 0.125rem;
+				line-height: 1.5;
+				text-align: justify;
+			}
+
+			.card-foot {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				.left {
+					font-size: 1em;
+					color: lighten($Dark-gray, 25);
+					display: flex;
+					align-items: center;
+					gap: 0.25rem;
+
+					.item-left {
+						font-size: 2em;
+						color: black;
+					}
+				}
+
+				.btn {
+					padding: 1rem 2rem;
+					outline: none;
+					border: none;
+					border-radius: 999rem;
+					background: $Moderate-cyan;
+					color: white;
+					cursor: pointer;
+					transition: 0.25s;
+
+					&:hover {
+						background: $Dark-cyan;
+					}
+				}
+			}
+		}
+	}
+}

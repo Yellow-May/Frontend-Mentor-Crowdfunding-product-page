@@ -1,0 +1,161 @@
+@media (max-width: 676px) {
+	body {
+		font-size: 0.875rem;
+
+		header {
+			padding: 3.5rem 2.5rem;
+			position: relative;
+
+			.nav-btn {
+				display: block;
+				background: none;
+				outline: none;
+				border: none;
+				cursor: pointer;
+				overflow: 0.75;
+				transition: 0.25s;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+
+			nav {
+				position: absolute;
+				top: 100%;
+				left: -100%;
+				transform: translateX(-50%);
+				transition: 0.25s;
+				width: 80%;
+				background: white;
+				border-radius: 0.75rem;
+				display: flex;
+				flex-direction: column;
+
+				a {
+					width: 100%;
+					padding: 1.5rem 2rem;
+					border-bottom: thin solid #f3f3f3;
+					color: #999;
+					font-size: 1.5em;
+
+					&:last-child {
+						border-bottom: none;
+					}
+				}
+			}
+		}
+
+		main {
+			width: 90%;
+			margin: auto;
+			margin-bottom: 5rem;
+
+			.top,
+			.mid,
+			.bot {
+				border-radius: 0.75rem;
+				padding: 2rem;
+			}
+
+			.top .buttons .btn {
+				height: 2.5rem;
+
+				&:nth-child(1) {
+					padding: 0 2rem;
+				}
+
+				&:nth-child(2) {
+					width: fit-content;
+					span {
+						display: none;
+					}
+
+					&.bookmarked {
+						width: auto;
+					}
+				}
+			}
+
+			.mid table td {
+				padding: 0 2rem;
+			}
+
+			.bot .cards {
+				gap: 1.5rem;
+
+				.card {
+					padding: 1.5rem;
+
+					.card-head {
+						flex-direction: column;
+						justify-content: flex-start;
+						align-items: flex-start;
+
+						.title {
+							padding-bottom: 0.5rem;
+						}
+					}
+
+					.card-foot {
+						flex-direction: column;
+						justify-content: flex-start;
+						align-items: flex-start;
+
+						.btn {
+							padding: 0.75rem 1.5rem;
+							margin-top: 0.75rem;
+						}
+					}
+				}
+			}
+		}
+
+		.modal {
+			.modal-content {
+				width: 80%;
+				padding: 1.75rem;
+
+				display: flex;
+				flex-direction: column;
+
+				button.cls {
+					transform: scale(0.875);
+					-webkit-transform: scale(0.875);
+				}
+
+				.pledge-card {
+					padding: 0.75rem;
+
+					&.selected .card-foot {
+						flex-direction: column;
+						justify-content: flex-start;
+						align-items: flex-start;
+						padding: 1.5rem 1rem 1rem 1rem;
+
+						button {
+							margin: 1rem;
+						}
+					}
+
+					.card-body td.td-title {
+						font-size: 1.05em;
+						font-weight: 600;
+						align-items: center;
+
+						div:nth-child(1) {
+							display: flex;
+							flex-direction: column;
+						}
+					}
+				}
+			}
+
+			.modal-completed {
+				width: 80%;
+				padding: 2.5rem;
+				gap: 2rem;
+			}
+		}
+	}
+}

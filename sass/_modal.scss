@@ -1,0 +1,202 @@
+.modal {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: rgba(black, 0.25);
+	display: none;
+	place-items: center;
+
+	.modal-content {
+		position: relative;
+		width: 45rem;
+		padding: 2.5rem;
+		background: white;
+		border-radius: 0.5rem;
+
+		display: grid;
+		gap: 2rem;
+
+		button.cls {
+			position: absolute;
+			top: 2rem;
+			right: 2rem;
+			outline: none;
+			border: none;
+			background: none;
+			cursor: pointer;
+			transition: 0.25s;
+			filter: opacity(0.5);
+
+			&:hover {
+				filter: opacity(1);
+			}
+		}
+
+		h1 {
+			font-size: 1.75em;
+		}
+
+		p {
+			font-size: 1.125em;
+		}
+
+		.pledge-card {
+			width: 100%;
+			border: thin solid lighten($Dark-gray, 25);
+			border-radius: 0.5rem;
+			padding: 1.25rem;
+			cursor: pointer;
+
+			&.faded {
+				opacity: 0.5;
+				cursor: not-allowed;
+
+				input {
+					cursor: not-allowed !important;
+				}
+			}
+
+			&.selected {
+				border-color: $Moderate-cyan;
+
+				.card-body {
+					padding-bottom: 2rem;
+				}
+
+				.card-foot {
+					border-top: thin solid #999;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: 2rem 0 1rem 0;
+
+					input {
+						border: none;
+						outline: none;
+						background: transparent;
+						color: black;
+						flex: 1;
+						pointer-events: all;
+						z-index: 2;
+					}
+
+					button {
+						outline: none;
+						padding: 0.75rem 1.5rem;
+						border-radius: 999rem;
+						cursor: pointer;
+						transition: 0.25s;
+					}
+
+					.btn-price {
+						border: thin solid #f3f3f3;
+						background: transparent;
+
+						&:hover {
+							border-color: $Moderate-cyan;
+						}
+					}
+
+					.btn-cont {
+						border: none;
+						background: $Moderate-cyan;
+						color: white;
+
+						&:hover {
+							background: $Dark-cyan;
+						}
+					}
+				}
+			}
+
+			.card-body td {
+				padding: 0.25rem 0.5rem;
+				line-height: 1.5;
+
+				&.td-title {
+					font-size: 1.05em;
+					font-weight: 600;
+
+					display: flex;
+					justify-content: space-between;
+				}
+
+				.checkbox {
+					width: 1.5rem;
+					height: 1.5rem;
+					border-radius: 50%;
+					position: relative;
+
+					input {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						opacity: 0;
+						cursor: pointer;
+
+						&:checked + span {
+							border-color: $Dark-cyan;
+
+							&::before {
+								background: $Dark-cyan;
+							}
+						}
+					}
+
+					span {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						border-radius: inherit;
+						border: thin solid lighten($Dark-gray, 45);
+						pointer-events: none;
+
+						&::before {
+							content: "";
+							position: absolute;
+							top: 0.25rem;
+							bottom: 0.25rem;
+							left: 0.25rem;
+							right: 0.25rem;
+							border-radius: inherit;
+						}
+					}
+				}
+			}
+
+			.card-foot {
+				display: none;
+			}
+		}
+	}
+
+	.modal-completed {
+		width: 40rem;
+		padding: 3.5rem;
+		border-radius: 0.75rem;
+		background: white;
+		display: none;
+		gap: 2.5rem;
+		text-align: center;
+		place-items: center;
+
+		button {
+			outline: none;
+			border: none;
+			border-radius: 999rem;
+			background: $Moderate-cyan;
+			color: white;
+			cursor: pointer;
+			padding: 0.75rem 1.5rem;
+			transition: 0.25s;
+
+			&:hover {
+				background: $Dark-cyan;
+			}
+		}
+	}
+}

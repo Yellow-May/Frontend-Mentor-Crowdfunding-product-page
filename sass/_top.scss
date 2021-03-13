@@ -1,0 +1,85 @@
+.top {
+	text-align: center;
+
+	img {
+		position: relative;
+		top: 100%;
+		transform: translateY(-100%);
+	}
+
+	h1 {
+		margin: -3rem 0 1rem 0;
+	}
+
+	p {
+		margin-bottom: 2rem;
+		font-size: 1em;
+		letter-spacing: 0.125rem;
+	}
+
+	.buttons {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.btn {
+			height: 3.5rem;
+			border-radius: 999rem;
+			outline: none;
+			border: none;
+			cursor: pointer;
+			transition: 0.25s;
+
+			display: flex;
+			font-size: 1em;
+			font-weight: 600;
+
+			&:nth-child(1) {
+				padding: 0 2rem;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				background: $Moderate-cyan;
+
+				&:hover {
+					background: $Dark-cyan;
+				}
+			}
+
+			&:nth-child(2) {
+				width: 11rem;
+				align-items: center;
+
+				svg {
+					height: 100%;
+				}
+
+				span {
+					font-size: inherit;
+					flex-grow: 1;
+					text-align: center;
+				}
+
+				&.bookmarked {
+					width: 12rem;
+					background: #f3f3f3;
+
+					svg {
+						circle {
+							fill: $Dark-cyan;
+						}
+
+						path {
+							fill: white;
+						}
+					}
+
+					span {
+						color: $Dark-cyan;
+					}
+				}
+			}
+		}
+	}
+}

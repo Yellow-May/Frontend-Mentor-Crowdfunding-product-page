@@ -1,0 +1,64 @@
+@import "base";
+
+body {
+	width: 100vw;
+	height: 100%;
+	overflow-x: hidden;
+	position: relative;
+
+	background: url(/images/image-hero-desktop.jpg) center top no-repeat,
+		lighten($Dark-gray, 45);
+	font-size: 1rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	header {
+		width: 100%;
+		padding: 3.5rem 10%;
+		margin-bottom: 17.5rem;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.nav-btn {
+			display: none;
+		}
+
+		nav a {
+			padding: 0 1rem;
+			text-decoration: none;
+			color: white;
+			font-size: 1em;
+		}
+	}
+
+	main {
+		width: 55rem;
+		margin: auto;
+		margin-bottom: 10rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+
+		.top,
+		.mid,
+		.bot {
+			width: inherit;
+			border-radius: 1rem;
+			background: white;
+			padding: 2.5rem;
+		}
+
+		@import "top";
+		@import "mid";
+		@import "bot";
+	}
+
+	@import "modal";
+}
+
+@import "mobile";

@@ -1,0 +1,44 @@
+.mid {
+	table {
+		border-collapse: collapse;
+		margin-bottom: 2.5rem;
+
+		td {
+			border-left: thin solid lighten($Dark-gray, 30);
+			padding: 0 5rem;
+
+			&:first-child {
+				border-left: none;
+				padding-left: 0;
+			}
+
+			h1 {
+				font-size: 1.75em;
+				padding-bottom: 0.5rem;
+			}
+
+			p {
+				font-size: 1em;
+				font-weight: 600;
+				color: lighten($Dark-gray, 30);
+			}
+		}
+	}
+
+	.progress-bar {
+		width: 100%;
+		height: 1rem;
+		border-radius: 999rem;
+		position: relative;
+		background: lighten($Dark-gray, 25);
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 75%;
+			height: 100%;
+			border-radius: inherit;
+			background: $Moderate-cyan;
+		}
+	}
+}
